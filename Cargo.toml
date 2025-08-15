@@ -1,8 +1,8 @@
 [package]
-authors = ["LongYinan <lynweklm@gmail.com>"]
+authors = ["jerry4718 <jerry4718@qq.com>"]
 edition = "2021"
-name = "napi-package-template"
-version = "0.1.0"
+name = "lithtech-parser"
+version = "0.0.100"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -10,11 +10,14 @@ version = "0.1.0"
 crate-type = ["cdylib"]
 
 [dependencies]
-napi = "3.0.0"
-napi-derive = "3.0.0"
+napi = "3.2.3"
+napi-derive = "3.2.3"
+
+[dependencies.binrw]
+version = "0.15.0"
 
 [build-dependencies]
-napi-build = "2"
+napi-build = "2.2.3"
 
 [profile.release]
 lto = true
