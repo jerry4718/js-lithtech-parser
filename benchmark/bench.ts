@@ -1,6 +1,6 @@
 import { Bench } from 'tinybench'
 
-import { plus100 } from '../index.js'
+import { plus100, plus100FromZig } from '../index.js'
 
 function add(a: number) {
   return a + 100
@@ -8,8 +8,12 @@ function add(a: number) {
 
 const bench = new Bench()
 
-bench.add('Native a + 100', () => {
+bench.add('Rust a + 100', () => {
   plus100(10)
+})
+
+bench.add('Zig a + 100', () => {
+  plus100FromZig(10)
 })
 
 bench.add('JavaScript a + 100', () => {
