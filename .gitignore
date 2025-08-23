@@ -196,3 +196,6 @@ Temporary Items
 
 ### intellij
 .idea
+
+### zig
+.zig-cache

@@ -1,0 +1,14 @@
+[package]
+name = "napi_shadow_derive"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+quote = "1.0.40"
+syn = { version = "2.0.104", features = ["default", "fold", "full"] }
+regex = "1.11.1"
+replace-types = "0.2.0"
+proc-macro2 = "1.0.97"

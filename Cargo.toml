@@ -9,9 +9,16 @@ version = "0.0.100"
 [lib]
 crate-type = ["cdylib"]
 
+[workspace]
+members = [
+    "./crates/*"
+]
+
 [dependencies]
 napi = "3.2.3"
 napi-derive = "3.2.3"
+walkdir = "2.5.0"
+napi_shadow = { path = "crates/napi_shadow" }
 
 [dependencies.binrw]
 version = "0.15.0"
