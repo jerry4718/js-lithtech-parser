@@ -18,7 +18,6 @@ pub struct LodContainer {
     pub render_priority: u8,
     pub mesh_type: u32,
     #[br(args { mesh_type })]
-    #[napi_shadow(skip)]
     pub mesh: LodMesh,
     pub used_node_count: u8,
     #[br(count = used_node_count)]

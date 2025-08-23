@@ -37,7 +37,6 @@ pub struct ItemProperty {
     pub data_length: u16,
 
     #[br(args{ data_type })]
-    #[napi_shadow(skip)]
     pub data: ItemPropertyData,
 }
 

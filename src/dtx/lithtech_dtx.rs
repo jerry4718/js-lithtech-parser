@@ -1,6 +1,6 @@
 use crate::dtx::dtx_header::DtxHeader;
 use crate::dtx::image::{
-    is_compressed, is_palette_32bit, is_palette_8bit, is_texture_32bit, ImageMeta,
+    is_compressed, is_palette_32bit, is_palette_8bit, is_texture_32bit, ImageData,
 };
 use binrw::helpers::until_eof;
 use binrw::BinRead;
@@ -109,8 +109,7 @@ pub struct LithtechDtx {
     pub is_palette_32bit: bool,
 
     #[br(args { header: &header })]
-    #[napi_shadow(skip)]
-    pub meta: ImageMeta,
+    pub data: ImageData,
 
     #[br(parse_with = until_eof)]
     pub surplus: Vec<u8>,

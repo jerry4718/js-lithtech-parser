@@ -127,8 +127,10 @@ export declare class DtxHeader {
 }
 
 export declare class DtxSection {
-  get section_type_string(): any
-  get section_name_string(): any
+  get section_type_data(): any
+  get section_name_data(): any
+  get section_type(): any
+  get section_name(): any
   get data_count(): any
   get data(): any
 }
@@ -146,6 +148,7 @@ export declare class ItemProperty {
   get data_type(): any
   get flags(): any
   get data_length(): any
+  get data(): any
 }
 
 export declare class ItemPropertyData {
@@ -234,6 +237,7 @@ export declare class LithtechDtx {
   get is_compressed(): any
   get is_texture_32bit(): any
   get is_palette_32bit(): any
+  get meta(): any
   get surplus(): any
 }
 
@@ -262,6 +266,7 @@ export declare class LodContainer {
   get render_style(): any
   get render_priority(): any
   get mesh_type(): any
+  get mesh(): any
   get used_node_count(): any
   get used_nodes(): any
 }

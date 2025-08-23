@@ -34,7 +34,7 @@ pub fn is_palette_32bit(header: &DtxHeader) -> bool {
 
 #[derive(NapiShadow, BinRead, Debug)]
 #[br(import{ header: &DtxHeader })]
-pub enum ImageMeta {
+pub enum ImageData {
     #[br(pre_assert(is_palette_8bit(header)))]
     Palette8Bit(#[br(args{ header })] Palette8Bit),
     #[br(pre_assert(is_compressed(header)))]
